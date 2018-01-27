@@ -21,6 +21,7 @@ public class GameController :
     public TextMesh infoText;
 
     private float resetTimer = 3f;
+    private float gameTime = 15f;
 
     // Use this for initialization
     void Start()
@@ -31,24 +32,31 @@ public class GameController :
     // Update is called once per frame
     void Update()
     {
-        if (player.health > 0)
+        if (player.health > 0 && gameTimer <= gameTime)
         {
+            //infoText.text = "Health: " + player.health;
+            infoText.text = "\nPoints: " + player.points;
             gameTimer += Time.deltaTime;
-            infoText.text = "Health: " + player.health;
-            infoText.text += "\nTime: " + Mathf.Floor(gameTimer);
+            //infoText.text += "\nTime: " + Mathf.Floor(gameTimer);
         }
         else
         {
-            infoText.text = "Game Over!";
-            infoText.text += "\nYou survived for " + Mathf.Floor(gameTimer) + " seconds!";
-            resetTimer -= Time.deltaTime;
-            if (resetTimer <= 0f)
+            if (player.health <= 0)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
+                infoText.text = "Game Over!";
+                infoText.text += "\nYou survived for " + Mathf.Floor(gameTimer) + " seconds!";
+                resetTimer -= Time.deltaTime;
+                if (resetTimer <= 0f)
+                {
+                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                }
+            } else
+            {
+                infoText.text = "You Won!!";
+                infoText.text = "You earned " + player.points + "points!";
+                //move to scientist information
+              }
         }
-
-
 
         enemyTimer -= Time.deltaTime;
         if (enemyTimer <= 0)
@@ -75,6 +83,7 @@ public class GameController :
 
             enemy.player = player;
             enemy.direction = (player.transform.position - enemy.transform.position).normalized;
+            enemy.transform.LookAt(player.transform);
         }
     }
 }

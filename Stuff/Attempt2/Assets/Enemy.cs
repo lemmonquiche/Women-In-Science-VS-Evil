@@ -19,6 +19,10 @@ public class Enemy : MonoBehaviour
     public int damage = 3;
 
     public float enemyHP = 5f;
+
+    private float timer;
+    public float gazeTimer = 2f;
+    private bool gazedAt;
    
 
     // Use this for initialization
@@ -30,6 +34,16 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (gazedAt)
+        {
+            timer += Time.deltaTime;
+
+            if(timer >= gazeTimer)
+            {
+                Destroy(this.gameObject);
+                player.points += 1;
+            }
+        }
         
         if (Vector3.Distance(transform.position, player.transform.position) < distanceToStop)
         {
@@ -51,7 +65,14 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    public void onHit() {
-        Destroy(this.gameObject);
+    public void PointerEnter()
+    {
+        gazedAt = true;
     }
+
+    public void PointerExit()
+    {
+        gazedAt = false;
+    }
+
 }

@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 {
 
     public int health = 100;
+    public int points = 0;
 
     // Use this for initialization
     void Start()
@@ -17,20 +18,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
-        {
-            RaycastHit hit;
-
-            if (Physics.Raycast(transform.position, transform.forward, out hit))
-            {
-                if (hit.transform.GetComponent<Enemy>() != null)
-                {
-                    Enemy enemy = hit.transform.GetComponent<Enemy>();
-                    enemy.onHit();
-                }
-            }
-        }
-
+    
     }
 
 }
