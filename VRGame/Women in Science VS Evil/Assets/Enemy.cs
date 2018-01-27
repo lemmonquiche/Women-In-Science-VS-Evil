@@ -27,9 +27,12 @@ public class Enemy : MonoBehaviour {
             chasingPlayer = false;
         }
 
-        if (chasingPlayer){
+        if (chasingPlayer)
+        {
             transform.position += direction * speed * Time.deltaTime;
-        } else {
+        }
+        else
+        {
             eatingTimer -= Time.deltaTime;
             if (eatingTimer <= 0f)
             {
@@ -37,8 +40,5 @@ public class Enemy : MonoBehaviour {
                 player.health -= damage;
             }
         }
-
-        
-
 	}
 }

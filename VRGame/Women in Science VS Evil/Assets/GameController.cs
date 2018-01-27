@@ -68,7 +68,7 @@ public class GameController :
                 );
 
             enemy.player = player;
-            enemy.direction = (player.transform.position - enemy.transform.position);
+            enemy.direction = (player.transform.position - enemy.transform.position).nor;
         }
 	}
 }
