@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Women in Science VS Evil", "Women in Science VS Evil.csproj", "{9855EDA3-74FC-FC40-D111-970DA96E6D29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Women in Science VS Evil.Editor", "Women in Science VS Evil.Editor.csproj", "{2647A638-AA4E-25FA-5BD6-B270CBE66E79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9855EDA3-74FC-FC40-D111-970DA96E6D29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9855EDA3-74FC-FC40-D111-970DA96E6D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9855EDA3-74FC-FC40-D111-970DA96E6D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9855EDA3-74FC-FC40-D111-970DA96E6D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2647A638-AA4E-25FA-5BD6-B270CBE66E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2647A638-AA4E-25FA-5BD6-B270CBE66E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2647A638-AA4E-25FA-5BD6-B270CBE66E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2647A638-AA4E-25FA-5BD6-B270CBE66E79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
