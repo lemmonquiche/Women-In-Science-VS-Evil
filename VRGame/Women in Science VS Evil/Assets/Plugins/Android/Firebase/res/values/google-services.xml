@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+  <string name="firebase_database_url" translatable="false">https://women-in-science-vs-evil.firebaseio.com</string>
+  <string name="gcm_defaultSenderId" translatable="false">439456967594</string>
+  <string name="google_storage_bucket" translatable="false">women-in-science-vs-evil.appspot.com</string>
+  <string name="project_id" translatable="false">women-in-science-vs-evil</string>
+  <string name="google_api_key" translatable="false">AIzaSyBggyw41uaP-cMHIzBIRpMO0pcUDBV-msw</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBggyw41uaP-cMHIzBIRpMO0pcUDBV-msw</string>
+  <string name="google_app_id" translatable="false">1:439456967594:android:87512fa3c4bcf89c</string>
+  <string name="default_web_client_id" translatable="false">439456967594-umctpcsrhsljinuajmc1u9qlhjmc9a6d.apps.googleusercontent.com</string>
+</resources>
