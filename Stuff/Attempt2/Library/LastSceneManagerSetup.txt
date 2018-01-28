@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/hiddenfigures.unity
+- path: Assets/WorkonClick.unity
   isLoaded: 1
   isActive: 1
