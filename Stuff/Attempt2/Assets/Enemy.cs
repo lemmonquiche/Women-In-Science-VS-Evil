@@ -18,11 +18,11 @@ public class Enemy : MonoBehaviour
 
     public int damage = 3;
 
-    public float enemyHP = 5f;
-
     private float timer;
     public float gazeTimer = 2f;
     private bool gazedAt;
+
+    public int points = 1;
    
 
     // Use this for initialization
@@ -41,7 +41,7 @@ public class Enemy : MonoBehaviour
             if(timer >= gazeTimer)
             {
                 Destroy(this.gameObject);
-                player.points += 1;
+                player.points += points;
             }
         }
         

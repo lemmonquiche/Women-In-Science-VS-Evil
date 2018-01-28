@@ -4,4 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/HappyEndGame.unity
+    guid: 0fcc234a3f136914fb100dc8e8808206
+  - enabled: 1
+    path: Assets/WorkonClick.unity
+    guid: 73e0c2bea6fc9a34e853919d31fb0c46
