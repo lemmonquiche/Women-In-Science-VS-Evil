@@ -22,6 +22,7 @@ public class GameController :
 
     private float resetTimer = 3f;
     private float gameTime = 15f;
+    private bool gameEnd = false;
 
     // Use this for initialization
     void Start()
@@ -41,49 +42,50 @@ public class GameController :
         }
         else
         {
+            gameEnd = true;
             if (player.health <= 0)
             {
                 infoText.text = "Game Over!";
                 infoText.text += "\nYou survived for " + Mathf.Floor(gameTimer) + " seconds!";
                 resetTimer -= Time.deltaTime;
-                if (resetTimer <= 0f)
-                {
-                    SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-                }
+               
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             } else
             {
                 infoText.text = "You Won!!";
                 infoText.text = "You earned " + player.points + "points!";
-                //move to scientist information
-              }
-        }
-
-        enemyTimer -= Time.deltaTime;
-        if (enemyTimer <= 0)
-        {
-            enemyTimer = enemyInterval;
-            enemyInterval -= enemyIntervalDecrement;
-
-
-            if (enemyInterval < minimumEnemyInterval)
-            {
-                enemyInterval = minimumEnemyInterval;
+                    SceneManager.LoadScene("HappyEndGame");
             }
-
-            GameObject enemyObject = Instantiate(enemyPrefab);
-
-            Enemy enemy = enemyObject.GetComponent<Enemy>();
-
-            float randomAngle = Random.Range(0f, Mathf.PI * 2f);
-            enemy.transform.position = new Vector3(
-                player.transform.position.x + Mathf.Cos(randomAngle) * enemySpawnDistance,
-                enemy.transform.position.y,
-                player.transform.position.z + Mathf.Sin(randomAngle) * enemySpawnDistance
-             );
-
-            enemy.player = player;
-            enemy.direction = (player.transform.position - enemy.transform.position).normalized;
-            enemy.transform.LookAt(player.transform);
         }
+
+       
+            enemyTimer -= Time.deltaTime;
+            if (enemyTimer <= 0)
+            {
+                enemyTimer = enemyInterval;
+                enemyInterval -= enemyIntervalDecrement;
+
+
+                if (enemyInterval < minimumEnemyInterval)
+                {
+                    enemyInterval = minimumEnemyInterval;
+                }
+
+                GameObject enemyObject = Instantiate(enemyPrefab);
+
+                Enemy enemy = enemyObject.GetComponent<Enemy>();
+
+                float randomAngle = Random.Range(0f, Mathf.PI * 2f);
+                enemy.transform.position = new Vector3(
+                    player.transform.position.x + Mathf.Cos(randomAngle) * enemySpawnDistance,
+                    enemy.transform.position.y,
+                    player.transform.position.z + Mathf.Sin(randomAngle) * enemySpawnDistance
+                 );
+
+                enemy.player = player;
+                enemy.direction = (player.transform.position - enemy.transform.position).normalized;
+                enemy.transform.LookAt(player.transform);
+            }
+        
     }
 }
