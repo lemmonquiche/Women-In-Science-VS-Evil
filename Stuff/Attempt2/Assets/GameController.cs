@@ -23,7 +23,6 @@ public class GameController :
 
     private float resetTimer = 3f;
     private float gameTime = 15f;
-    private bool gameEnd = false;
 
     // Use this for initialization
     void Start()
@@ -43,7 +42,6 @@ public class GameController :
         }
         else
         {
-            gameEnd = true;
             if (player.health <= 0)
             {
                 infoText.text = "Game Over!";
