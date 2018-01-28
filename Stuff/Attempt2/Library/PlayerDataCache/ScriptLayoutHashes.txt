@@ -1,6 +1,6 @@
 Android
 SceneListBegin?
-Assets/WorkonClick.unity
+Assets/Login.unity
 SceneListEnd?
 176f67aae4ec7273cfef37fd8876bd9a Assembly-CSharp.dll:.GvrDropdown
 047843e8fc8efc789ac0ebf61a6343c3 Assembly-CSharp.dll:GoogleVR.HelloVR.HeadsetDemoManager
@@ -50,7 +50,7 @@ c63db43c730fa2cbb8ca07de15898cb6 UnityEngine.UI.dll:UnityEngine.UI.Toggle
 f61c0793411f10cf5fbfa1473fef5ef2 UnityEngine.UI.dll:UnityEngine.UI.ToggleGroup
 86d36c43c53541d667100dc90b89cfba UnityEngine.UI.dll:UnityEngine.EventSystems.TouchInputModule
 1b8c02d0aa82fbf036a2b9b2d713eec3 UnityEngine.UI.dll:UnityEngine.UI.VerticalLayoutGroup
-0f0d40869eea3d6e3e8215135d0d7c91 Assembly-CSharp.dll:.Enemy
+804ee8f568b912e731a1692626fd1d86 Assembly-CSharp.dll:.Enemy
 8a8bbf8c923aa45b1565ce9733c32e8e Assembly-CSharp.dll:GoogleVR.PermissionsDemo.PermissionsFlowManager
 8b8d573315d3b0f2cea37c3653f4c9fb Assembly-CSharp.dll:GoogleVR.VideoDemo.AppButtonInput
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
@@ -331,3 +331,7 @@ d2a2bd333db22f480a8589e167314ecc Vuforia.UnityExtensions.dll:Vuforia.UserDefined
 3d1b89310e77c34bc0c8d7132231345c Vuforia.UnityExtensions.dll:Vuforia.WireframeBehaviour
 05524b8f659e7bfe5756d1335fec24ba Vuforia.UnityExtensions.dll:Vuforia.WireframeTrackableEventHandler
 15bea26698002c6c4a3087131232ce5c Vuforia.UnityExtensions.dll:Vuforia.WordBehaviour
+237460bca7165956b67d4924ada55585 Assembly-CSharp.dll:.GameReturn
+3c384cac421ac6ff4ee9bda5f977e410 Assembly-CSharp.dll:.Login
+b1fde9645aca65f20c8cb357d2edefd2 Assembly-CSharp.dll:.Register
+05524b8f659e7bfe5756d1335fec24ba Firebase.Platform.dll:Firebase.Platform.FirebaseMonoBehaviour
