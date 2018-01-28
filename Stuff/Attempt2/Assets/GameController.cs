@@ -22,7 +22,7 @@ public class GameController :
     public TextMesh infoText;
 
     private float resetTimer = 3f;
-    private float gameTime = 15f;
+    private float gameTime = 30f;
 
     // Use this for initialization
     void Start()

@@ -5,7 +5,7 @@ Assets/Register.unity
 Assets/WorkonClick.unity
 Assets/HappyEndGame.unity
 Assets/HiddenFiguresEnding.unity
-Assets/hiddenfigures.unity
+Assets/hiddenfigures2.unity
 SceneListEnd?
 176f67aae4ec7273cfef37fd8876bd9a Assembly-CSharp.dll:.GvrDropdown
 047843e8fc8efc789ac0ebf61a6343c3 Assembly-CSharp.dll:GoogleVR.HelloVR.HeadsetDemoManager

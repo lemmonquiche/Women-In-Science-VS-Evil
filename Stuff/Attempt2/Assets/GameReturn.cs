@@ -17,7 +17,7 @@ public class GameReturn : MonoBehaviour {
 
             if(timer >= gazeTimer)
             {
-                SceneManager.LoadScene("hiddenfigures2");
+                SceneManager.LoadScene("WorkonClick");
             }
         }
     }

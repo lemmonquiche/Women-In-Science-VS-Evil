@@ -27,7 +27,7 @@ public class Controller2:
     // Use this for initialization
     void Start()
     {
-		StartCoroutine(SwitchToVR());
+		//StartCoroutine(SwitchToVR());
     }
 
     // Update is called once per frame
