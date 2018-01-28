@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/HiddenFiguresEnding.unity
     guid: fd7e277d07963424d87b8fa9cd2350b5
-  - enabled: 1
+  - enabled: 0
     path: Assets/hiddenfigures.unity
     guid: 098d2396d7d642b4791b144998eab2ee
+  - enabled: 1
+    path: Assets/hiddenfigures2.unity
+    guid: 8c0d906b875b45746ad902f632af300c

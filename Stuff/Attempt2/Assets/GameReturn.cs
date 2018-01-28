@@ -17,7 +17,7 @@ public class GameReturn : MonoBehaviour {
 
             if(timer >= gazeTimer)
             {
-                SceneManager.LoadScene("Login");
+                SceneManager.LoadScene("hiddenfigures2");
             }
         }
     }
