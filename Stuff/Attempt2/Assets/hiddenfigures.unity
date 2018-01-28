@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 400915878}
-  enemyPrefab: {fileID: 1461787829891068, guid: 8f4e4e7f4bbc51c4290979f92c2f59a8,
+  enemyPrefab: {fileID: 1932927582527562, guid: f84c6b436f6bae641a59828be9da54f9,
     type: 2}
   enemySpawnDistance: 25
   enemyInterval: 4

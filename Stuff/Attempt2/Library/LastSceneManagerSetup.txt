@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/HiddenFiguresEnding.unity
+- path: Assets/hiddenfigures.unity
   isLoaded: 1
   isActive: 1
