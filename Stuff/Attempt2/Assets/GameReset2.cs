@@ -19,7 +19,7 @@ public class GameReset2 : MonoBehaviour
 
             if (timer >= gazeTimer)
             {
-                SceneManager.LoadScene("WorkonClick");
+                SceneManager.LoadScene("Login");
             }
         }
     }

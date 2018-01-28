@@ -51,8 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Controller2.cs" />
      <Compile Include="Assets\Enemy.cs" />
      <Compile Include="Assets\GameController.cs" />
+     <Compile Include="Assets\GameReset2.cs" />
      <Compile Include="Assets\GameReturn.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoInputManager.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\DemoSceneManager.cs" />
@@ -271,9 +273,6 @@
  </Reference>
  <Reference Include="UnityEditor.Facebook.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/Facebook/UnityEditor.Facebook.Extensions.dll</HintPath>
- </Reference>
- <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
- <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/15.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
  </Reference>
  <Reference Include="Firebase.Editor">
  <HintPath>C:/Users/anamk/Desktop/SheInnovates2018/Stuff/Attempt2/Assets/Firebase/Editor/Firebase.Editor.dll</HintPath>

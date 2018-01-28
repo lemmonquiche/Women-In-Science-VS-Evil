@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.XR;
 
 public class Controller2:
     MonoBehaviour
@@ -26,7 +27,7 @@ public class Controller2:
     // Use this for initialization
     void Start()
     {
-
+		StartCoroutine(SwitchToVR());
     }
 
     // Update is called once per frame
@@ -87,4 +88,20 @@ public class Controller2:
         }
 
     }
+
+	// Call via `StartCoroutine(SwitchToVR())` from your code. Or, use
+	// `yield SwitchToVR()` if calling from inside another coroutine.
+	IEnumerator SwitchToVR()
+	{
+		// Device names are lowercase, as returned by `XRSettings.supportedDevices`.
+		string desiredDevice = "daydream"; // Or "cardboard".
+
+		XRSettings.LoadDeviceByName(desiredDevice);
+
+		// Must wait one frame after calling `XRSettings.LoadDeviceByName()`.
+		yield return null;
+
+		// Now it's ok to enable VR mode.
+		XRSettings.enabled = true;
+	}
 }

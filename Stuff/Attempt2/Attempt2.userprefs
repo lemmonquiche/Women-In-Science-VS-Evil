@@ -1,9 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Register.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameController.cs">
     <Files>
-      <File FileName="Assets\Login.cs" Line="79" Column="7" />
-      <File FileName="Assets\Register.cs" Line="47" Column="1" />
+      <File FileName="Assets\Login.cs" Line="74" Column="11" />
+      <File FileName="Assets\Register.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
