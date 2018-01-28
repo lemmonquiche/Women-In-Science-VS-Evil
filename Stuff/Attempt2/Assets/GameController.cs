@@ -9,10 +9,10 @@ public class GameController :
 
     public Player player;
     public GameObject enemyPrefab;
-    public float enemySpawnDistance = 20f;
+    public float enemySpawnDistance = 25f;
 
-    public float enemyInterval = 1.0f;
-    public float minimumEnemyInterval = 0.5f;
+    public float enemyInterval = 4.0f;
+    public float minimumEnemyInterval = 2f;
     public float enemyIntervalDecrement = 0.1f;
 
     private float gameTimer = 0f;
@@ -79,7 +79,7 @@ public class GameController :
                 player.transform.position.x + Mathf.Cos(randomAngle) * enemySpawnDistance,
                 enemy.transform.position.y,
                 player.transform.position.z + Mathf.Sin(randomAngle) * enemySpawnDistance
-                );
+             );
 
             enemy.player = player;
             enemy.direction = (player.transform.position - enemy.transform.position).normalized;

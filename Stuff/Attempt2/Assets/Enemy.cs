@@ -52,7 +52,7 @@ public class Enemy : MonoBehaviour
 
         if (chasingPlayer)
         {
-            transform.position += direction * speed * Time.deltaTime;
+            transform.position += 0.5f * (direction * speed * Time.deltaTime);
         }
         else
         {
