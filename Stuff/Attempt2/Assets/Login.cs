@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 using Firebase;
@@ -12,6 +10,8 @@ public class Login : MonoBehaviour {
 
 	public GameObject username;
 	public GameObject password;
+    public Button loginButton;
+    public Button registerButton;
 
 	private string m_username;
 	private string m_password;
@@ -23,7 +23,13 @@ public class Login : MonoBehaviour {
 
 		// Get the root reference location of the database.
 		DatabaseReference reference = FirebaseDatabase.DefaultInstance.RootReference;
-	}
+
+        Button loginBtn = loginButton.GetComponent<Button>();
+        loginBtn.onClick.AddListener(LoginButton);
+
+        Button registerBtn = registerButton.GetComponent<Button>();
+        registerBtn.onClick.AddListener(RegisterButton);
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -37,45 +43,62 @@ public class Login : MonoBehaviour {
 		m_password = password.GetComponent<InputField>().text;
 
 		if (Input.GetKeyDown (KeyCode.Return)) {
-			if (m_username != "" && m_password != "") {
-				LoginButton ();
-			} else {
-				// TODO
-				print("Error occurred.");
-			}
+            LoginButton();
 		}
 	}
 
 	public void LoginButton() {
-		FirebaseDatabase.DefaultInstance
-			.GetReference ("rest/users")
-			.GetValueAsync ().ContinueWith (task => {
-				if (task.IsFaulted) {
-					// Handle the error...
-				} else if (task.IsCompleted) {
-					DataSnapshot snapshot = task.Result;
-					// Do something with snapshot...
-					print (snapshot.GetRawJsonValue());
-					if (snapshot.HasChildren) {
-						foreach (DataSnapshot user in snapshot.Children) {
-							if (user.HasChild("username") && m_username.Equals(user.Child("username").Value)) {
-								if (user.HasChild("password") && m_password.Equals(user.Child("password").Value)) {
-									print("Successful login!");
-									int currLevel = 0;
-									if (user.HasChild("level")) {
-										currLevel = (int)user.Child("level").Value;
-										// TODO: go to level
-									}
-									print("currLevel = " + currLevel);
-								} else {
-									print("Incorrect password");
-								}
-							} else {
-								print("User does not exist");
-							}
-						}
-					}
-				}
-			});
+        if (m_username != "" && m_password != "") {
+            FirebaseDatabase.DefaultInstance
+                .GetReference("rest/users")
+                .GetValueAsync().ContinueWith(task =>
+                {
+                    if (task.IsFaulted)
+                    {
+                        // Handle the error...
+                    }
+                    else if (task.IsCompleted)
+                    {
+                        DataSnapshot snapshot = task.Result;
+                        // Do something with snapshot...
+                        print(snapshot.GetRawJsonValue());
+                        if (snapshot.HasChildren)
+                        {
+                            foreach (DataSnapshot user in snapshot.Children)
+                            {
+                                if (user.HasChild("username") && m_username.Equals(user.Child("username").Value))
+                                {
+                                    if (user.HasChild("password") && m_password.Equals(user.Child("password").Value))
+                                    {
+										print("Successful login!");
+										SceneManager.LoadScene("WorkonClick");
+                                        int currLevel = 0;
+                                        if (user.HasChild("level"))
+                                        {
+                                            currLevel = (int)user.Child("level").Value;
+                                            // TODO: go to level
+                                        }
+                                        print("currLevel = " + currLevel);
+                                    }
+                                    else
+                                    {
+                                        print("Incorrect password");
+                                    }
+                                }
+                                else
+                                {
+                                    print("User does not exist");
+                                }
+                            }
+                        }
+                    }
+                });
+        } else {
+            print("Error occurred.");
+        }
 	}
+
+    public void RegisterButton() {
+        SceneManager.LoadScene("Register");
+    }
 }

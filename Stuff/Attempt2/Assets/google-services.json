@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "439456967594",
+    "firebase_url": "https://women-in-science-vs-evil.firebaseio.com",
+    "project_id": "women-in-science-vs-evil",
+    "storage_bucket": "women-in-science-vs-evil.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:439456967594:android:87512fa3c4bcf89c",
+        "android_client_info": {
+          "package_name": "com.sam.women_in_stem_vs_evil"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "439456967594-umctpcsrhsljinuajmc1u9qlhjmc9a6d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBggyw41uaP-cMHIzBIRpMO0pcUDBV-msw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

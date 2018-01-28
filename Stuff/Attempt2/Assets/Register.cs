@@ -1,7 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-
-using UnityEngine;
+﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 using Firebase;
@@ -15,23 +13,27 @@ public class Register : MonoBehaviour {
 	public GameObject username;
 	public GameObject password;
 	public GameObject confirmPassword;
+    public Button loginButton;
+    public Button registerButton;
 
 	private string m_username;
 	private string m_password;
 	private string m_confirmPassword;
 
-	private string form;	// Contains all the form values
-
 	// Use this for initialization
 	void Start () {
-		Screen.orientation = ScreenOrientation.Landscape;
-
 		// Set up the Editor before calling into the realtime database.
 		FirebaseApp.DefaultInstance.SetEditorDatabaseUrl("https://women-in-science-vs-evil.firebaseio.com/");
 
 		// Get the root reference location of the database.
 		reference = FirebaseDatabase.DefaultInstance.RootReference;
-	}
+
+        Button loginBtn = loginButton.GetComponent<Button>();
+        loginBtn.onClick.AddListener(LoginButton);
+
+        Button registerBtn = registerButton.GetComponent<Button>();
+        registerBtn.onClick.AddListener(RegisterButton);
+    }
 
 	// Update is called once per frame
 	void Update () {
@@ -49,40 +51,52 @@ public class Register : MonoBehaviour {
 		m_confirmPassword = confirmPassword.GetComponent<InputField>().text;
 	
 		if (Input.GetKeyDown (KeyCode.Return)) {
-			if (m_username != "" && m_password != "" && m_confirmPassword != "" && m_confirmPassword.Equals (m_password)) {
-				RegisterButton ();
-			} else {
-				// TODO
-				print("Error occurred.");
-			}
+			RegisterButton ();
 		}
 	}
+
+    public void LoginButton() {
+        SceneManager.LoadScene("Login");
+    }
 		
 	public void RegisterButton() {
-
-		FirebaseDatabase.DefaultInstance
-			.GetReference ("rest/users")
-			.GetValueAsync ().ContinueWith (task => {
-				if (task.IsFaulted) {
-					// Handle the error...
-				} else if (task.IsCompleted) {
-					DataSnapshot snapshot = task.Result;
-					// Do something with snapshot...
-					print (snapshot.GetRawJsonValue());
-					if (snapshot.HasChildren) {
-						foreach (DataSnapshot user in snapshot.Children) {
-							if (user.HasChild("username") && m_username.Equals(user.Child("username").Value)) {
-								print("User already exists");
-							} else {
-								User newUser = new User(m_username, m_password, 0);
-								string json = JsonUtility.ToJson(newUser);
-								reference.Child("rest/users").Push();
-							}
-						}
-					}
-				}
-			});
-	}
+        if (m_username != "" && m_password != "" && m_confirmPassword != "" && m_confirmPassword.Equals(m_password)) {
+            FirebaseDatabase.DefaultInstance
+                .GetReference("rest/users")
+                .GetValueAsync().ContinueWith(task =>
+                {
+                    if (task.IsFaulted)
+                    {
+                        // Handle the error...
+                    }
+                    else if (task.IsCompleted)
+                    {
+                        DataSnapshot snapshot = task.Result;
+                        // Do something with snapshot...
+                        print(snapshot.GetRawJsonValue());
+                        if (snapshot.HasChildren)
+                        {
+                            foreach (DataSnapshot user in snapshot.Children)
+                            {
+                                if (user.HasChild("username") && m_username.Equals(user.Child("username").Value))
+                                {
+                                    print("User already exists");
+                                }
+                                else
+                                {
+                                    User newUser = new User(m_username, m_password, 0);
+                                    string json = JsonUtility.ToJson(newUser);
+                                    //reference.Child("rest/users").Push();
+                                }
+                            }
+                        }
+                    }
+                });
+        } else {
+            // TODO
+            print("Error occurred.");
+        }
+    }
 
 	private class User {
 

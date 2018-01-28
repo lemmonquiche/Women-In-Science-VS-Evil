@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Login.unity
     guid: 491eefec9ffddf04aab121e21b800929
-  - enabled: 0
+  - enabled: 1
+    path: Assets/Register.unity
+    guid: a65a841c4b291dd4eaf2da9c2332bcc7
+  - enabled: 1
     path: Assets/WorkonClick.unity
     guid: 73e0c2bea6fc9a34e853919d31fb0c46
-  - enabled: 0
+  - enabled: 1
     path: Assets/HappyEndGame.unity
     guid: 0fcc234a3f136914fb100dc8e8808206

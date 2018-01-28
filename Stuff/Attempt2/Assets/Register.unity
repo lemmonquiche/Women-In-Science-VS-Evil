@@ -1227,6 +1227,8 @@ MonoBehaviour:
   username: {fileID: 2032113332}
   password: {fileID: 316260971}
   confirmPassword: {fileID: 1190925817}
+  loginButton: {fileID: 8848204}
+  registerButton: {fileID: 1742428672}
 --- !u!114 &1560370021
 MonoBehaviour:
   m_ObjectHideFlags: 0

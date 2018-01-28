@@ -13,6 +13,7 @@ C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Google.Sha
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Google.VersionHandler.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Google.VersionHandlerImpl_v1.2.61.0.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\nunit.framework.dll
+C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\SyntaxTree.VisualStudio.Unity.Bridge.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Unity.Compat.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Unity.Tasks.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\UnityEditor.Advertisements.dll
@@ -63,6 +64,7 @@ C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\ExCSS.Unit
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Unity.Legacy.NRefactory.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Unity.UNetWeaver.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Unity.Cecil.Mdb.dll
+C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\SyntaxTree.VisualStudio.Unity.Messaging.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Unity.CecilTools.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Unity.Cecil.Pdb.dll
 C:\Users\anamk\Desktop\SheInnovates2018\Stuff\Attempt2\Temp\bin\Debug\Assembly-CSharp.pdb
